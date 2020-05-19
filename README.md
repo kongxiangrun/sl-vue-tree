@@ -88,23 +88,23 @@ You can get the list of `ISlTreeNode` from the computed `slVueTree.nodes` proper
 
 | prop             | type               | default                | description                                                                                                                                                                                              |
 |------------------|--------------------|------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| value            | ISlTreeNodeModel[] | []                     | An array of nodes to show. Each node is represented by `ISlTreeNodeModel` interface                                                                                                                              |
-| allowMultiselect | Boolean            | true                   | Disable or enable the multiselect feature                                                                                                                                                                |
-| allowToggleBranch | Boolean            | true                   | Disable or enable the expand/collapse button                                                                                                                                                                |
-| edgeSize         | Number             | 3                      | Offset in pixels from top and bottom for folder-node element. While dragging cursor is in that offset, the dragging node will be placed before or after the folder-node instead of being placed inside the folder. |
-| scrollAreaHeight | Number             | 70                     | Offset in pixels from top and bottom for the component element. While dragging cursor is in that area, the scrolling starts.                                                                                |
-| maxScrollSpeed   | Number             | 20                     | The scroll speed is relative to the cursor position. Defines the max scroll speed.             
-| multiselectKey   | String/String[] |['ctrlKey', 'metaKey'] | The keys for multiselect mode. Allowed values are ['ctrlKey', 'metaKey', 'altKey']   
+| value            | ISlTreeNodeModel[] | []                     | An array of nodes to show. Each node is represented by `ISlTreeNodeModel` interface 要显示的节点数组。 每个节点由“ ISlTreeNodeModel”接口表示                                                                                                                              |
+| allowMultiselect | Boolean            | true                   | Disable or enable the multiselect feature 禁用或启用多选功能                                                                                                                                                               |
+| allowToggleBranch | Boolean            | true                   | Disable or enable the expand/collapse button  禁用或启用展开/折叠按钮                                                                                                                                                              |
+| edgeSize         | Number             | 3                      | Offset in pixels from top and bottom for folder-node element. While dragging cursor is in that offset, the dragging node will be placed before or after the folder-node instead of being placed inside the folder. 文件夹节点元素的上下偏移量（以像素为单位）。 当拖动光标处于该偏移量时，拖动节点将放置在文件夹节点之前或之后，而不是放置在文件夹内部。|
+| scrollAreaHeight | Number             | 70                     | Offset in pixels from top and bottom for the component element. While dragging cursor is in that area, the scrolling starts. 组件元素的上下偏移量。 当拖动光标在该区域中时，开始滚动。                                                                               |
+| maxScrollSpeed   | Number             | 20                     | The scroll speed is relative to the cursor position. Defines the max scroll speed. 滚动速度是相对于光标位置的。 定义最大滚动速度。
+| multiselectKey   | String/String[] |['ctrlKey', 'metaKey'] | The keys for multiselect mode. Allowed values are 多选模式的键。 允许值为 ['ctrlKey', 'metaKey', 'altKey']   
 
 # Computed props
 
 | prop           | type            | description                                                                                                                                                                                                                                                     |
 |----------------|-----------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| nodes          | ISlTreeNode[]   | List of nodes with some computed props. See `ISlTreeNode` interface.                                                                                                                                                                                            |
-| cursorPosition | ICursorPosition | Represents the current cursor position that describes the action that will be applied to the dragged node on `mouseup` event. See `ICursorPosition` interface |
-| selectionSize  | Number          | The count of selected nodes
-| dragSize       | Number          | The count of selected and draggable nodes
-| isDragging     | Boolean         | True if nodes are dragging
+| nodes          | ISlTreeNode[]   | List of nodes with some computed props. See `ISlTreeNode` interface.    具有一些计算道具的节点列表。 参见`ISlTreeNode`接口。                                                                                                                                                                                        |
+| cursorPosition | ICursorPosition | Represents the current cursor position that describes the action that will be applied to the dragged node on `mouseup` event. See `ICursorPosition` interface 表示当前光标位置，该位置描述将在`mouseup`事件上应用于拖动节点的动作。 参见“光标位置”界面 |
+| selectionSize  | Number          | The count of selected nodes 所选节点数
+| dragSize       | Number          | The count of selected and draggable nodes 选定节点和可拖动节点的数量
+| isDragging     | Boolean         | True if nodes are dragging 如果节点正在拖动，则为真
 
 ````
 interface ICursorPosition<TDataType> {
